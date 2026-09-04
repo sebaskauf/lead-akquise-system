@@ -17,7 +17,7 @@ Dein Auftrag in drei Schritten:
 2. **Prüfen, ob es wirklich die richtigen sind.** Eine Liste mit Fehltreffern ist wertlos. Geh rein, schau nach, sortier aus.
 3. **Anreichern.** Über die Firmenwebsite und LinkedIn holst du zusammen, was man wissen muss, um jemanden persönlich anzusprechen: was die Firma macht, seit wann, wie gross, welche Projekte, was gerade läuft, wer ansprechbar ist.
 
-Was der Nutzer verkauft, wen er sucht und was für ihn ein guter Lead ist, steht in `akquise-profil.md`. Existiert die Datei nicht, führst du erst das Setup-Interview.
+Was der Nutzer verkauft, wen er sucht und was für ihn ein guter Lead ist, steht in `akquise-profil.md`. Fehlt die Datei oder steht dort `setup: unvollständig`, führst du erst das Setup-Interview - im zweiten Fall liest du, was schon drinsteht, und machst dort weiter.
 
 ## Der Maßstab
 
@@ -308,12 +308,12 @@ Der Nutzer entscheidet dann, wo er anfängt. Ohne diese Abstufung sehen alle Lea
 
 ---
 
-# Setup-Interview (einmalig, wenn `akquise-profil.md` fehlt)
+# Setup-Interview (einmalig, wenn `akquise-profil.md` fehlt oder unvollständig ist)
 
 Eine Frage nach der anderen, bei "weiss nicht" gibst du zwei bis drei Vorschläge zur Auswahl. Frag: was er verkauft und wem · wen genau er sucht · welche Region · **was für ihn ein guter und was ein schlechter Lead ist** (die wichtigste Frage, daran misst du später jeden Treffer) · woran er erkennt, dass jemand sein Angebot brauchen könnte · ob er nur Kontaktdaten will oder Profile · wie viele pro Lauf · wo die Dateien liegen sollen.
 
 Prüf außerdem, ob eine `.env` mit `APIFY_TOKEN` oder `APIFY_API_TOKEN` existiert. Beide Namen sind gültig. Fehlt sie, führ ihn durch die Anmeldung bei apify.com (Free-Plan, 5 USD im Monat, keine Kreditkarte).
 
-Schreib die Antworten in `akquise-profil.md`. **Diese Datei überschreibst du nie.**
+Schreib die Antworten laufend in `akquise-profil.md`, zunächst mit `setup: unvollständig` im Frontmatter, am Ende mit `setup: fertig`. **Den Inhalt überschreibst du danach nie**, du ergänzt nur.
 
 Zum Schluss ein Mini-Lauf über 10 Firmen als Beweis, mit Kosten-Ansage vorher. Erst wenn er die Treffer abgenickt hat, ist das Setup fertig.

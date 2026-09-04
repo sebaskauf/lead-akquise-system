@@ -16,12 +16,15 @@ Installiere mir das Lead-Akquise-System aus diesem Repo und richte es auf MICH e
 
 Arbeite die Schritte der Reihe nach ab. Schlägt etwas fehl, zeig mir die genaue Fehlermeldung und was du brauchst, statt den Schritt als erledigt zu melden oder ihn zu überspringen.
 
-SCHRITT 0 - VORAUSSETZUNGEN
-Prüf still, ob `git` und `python3` da sind und ob `~/.claude/agents/` existiert oder angelegt werden kann. Fehlt etwas, sag mir genau was und wie ich es nachhole. Ist alles da, sag das in einem Satz und mach weiter.
+SCHRITT 0 - ARBEITSORDNER UND VORAUSSETZUNGEN
+1. **Sag mir zuerst, in welchem Ordner du gerade bist, und frag mich, ob meine Leads dorthin sollen.** Ist es mein Home-Verzeichnis oder der Repo-Ordner, schlag mir etwas Besseres vor (zum Beispiel `~/Documents/Leads`) und leg es auf mein Ja an. Dieser Ordner ist ab jetzt "mein Arbeitsordner" - dort landen Profil, Leads und die `.env`, und nirgendwo sonst. Merk ihn dir für alle weiteren Schritte.
+2. Prüf still: `git` und `python3` vorhanden, `~/.claude/agents/` existiert oder anlegbar, Schreibrecht im Arbeitsordner, und ob du Websuche nutzen kannst. Fehlt etwas, sag mir genau was und wie ich es nachhole, bevor wir anfangen.
 
 SCHRITT 1 - INSTALLIEREN
 1. `git clone https://github.com/sebaskauf/lead-akquise-system.git ~/Documents/Projects/lead-akquise-system` (falls der Ordner schon existiert: dort `git pull` statt clone).
-2. Führ `./install.sh` im Repo aus. Das Script kopiert die Agent-Definition nach `~/.claude/agents/` und sichert eine bestehende Version vorher mit Zeitstempel.
+2. Führ `./install.sh` im Repo aus. Das Script kopiert die Agent-Definition nach `~/.claude/agents/`.
+   - Läuft es durch: gut.
+   - **Endet es mit Code 2**, habe ich schon einen Agenten dieses Namens. Das Script überschreibt ihn absichtlich nicht. Lies mir vor, wessen Agent da liegt, und frag MICH: `./install.sh --force` überschreibt ihn (mit Sicherungskopie), `./install.sh --name leads` installiert daneben unter neuem Namen. Entscheide das nicht selbst.
 3. **Ich muss Claude Code jetzt NICHT neu starten** - du liest die Agent-Datei gleich direkt und führst das Setup selbst durch. Der Neustart kommt erst ganz am Ende.
 
 SCHRITT 2 - APIFY ANBINDEN
@@ -51,7 +54,7 @@ Lies die installierte Agent-Datei (`~/.claude/agents/lead-akquise.md`, Abschnitt
 
 Die wichtigste Frage ist die nach gutem und schlechtem Lead. Hak dort nach, bis es konkret ist, statt eine vage Antwort stehen zu lassen: Firmengröße, Inhaber oder Kette, mit oder ohne Website, bestimmte Leistungen. An dieser Antwort prüfst du später jeden Treffer, also ist sie der Maßstab für die ganze Liste.
 
-Schreib die Antworten als `akquise-profil.md` in meinen Arbeitsordner.
+Schreib die Antworten als `akquise-profil.md` in meinen Arbeitsordner. **Sichere dabei laufend:** Schreib nach jedem größeren Abschnitt weg, was du schon weißt, mit `setup: unvollständig` im Frontmatter. Erst am Ende wird daraus `setup: fertig`. Werde ich unterbrochen, machst du beim nächsten Mal dort weiter, statt von vorn zu fragen.
 
 SCHRITT 6 - WOHIN DIE LEADS SOLLEN
 Frag mich, ob ich das **Agentic OS** nutze (das Obsidian-Cockpit aus der Academy).
