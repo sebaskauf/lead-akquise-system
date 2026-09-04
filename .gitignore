@@ -14,3 +14,6 @@ scrape-input.json
 .venv-scrapling/
 .venv*/
 *.bak
+
+# Verworfene Fassungen: lokal behalten, nicht veroeffentlichen
+agent/_archiv/

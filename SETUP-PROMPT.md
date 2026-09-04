@@ -1,14 +1,28 @@
 # Setup-Prompt
 
-Diesen Prompt komplett kopieren und in Claude Code pasten. Am besten startest du Claude Code vorher in dem Ordner, in dem deine Leads liegen sollen.
+Kopier den ganzen Block unter der Linie und füg ihn in Claude Code ein.
+
+Starte Claude Code vorher am besten in dem Ordner, in dem deine Leads liegen
+sollen. Rechne mit zwanzig bis dreißig Minuten, den größten Teil davon für das
+Interview - daran hängt später die Qualität jeder Liste.
+
+Überleg dir vorher eine Sache: **was für dich ein guter und was ein schlechter
+Kunde ist.** Danach wird gefragt, und je konkreter du das sagst, desto besser
+wird die Liste.
 
 ---
 
 Installiere mir das Lead-Akquise-System aus diesem Repo und richte es auf MICH ein: https://github.com/sebaskauf/lead-akquise-system
 
+Arbeite die Schritte der Reihe nach ab. Schlägt etwas fehl, zeig mir die genaue Fehlermeldung und was du brauchst, statt den Schritt als erledigt zu melden oder ihn zu überspringen.
+
+SCHRITT 0 - VORAUSSETZUNGEN
+Prüf still, ob `git` und `python3` da sind und ob `~/.claude/agents/` existiert oder angelegt werden kann. Fehlt etwas, sag mir genau was und wie ich es nachhole. Ist alles da, sag das in einem Satz und mach weiter.
+
 SCHRITT 1 - INSTALLIEREN
 1. `git clone https://github.com/sebaskauf/lead-akquise-system.git ~/Documents/Projects/lead-akquise-system` (falls der Ordner schon existiert: dort `git pull` statt clone).
 2. Führ `./install.sh` im Repo aus. Das Script kopiert die Agent-Definition nach `~/.claude/agents/` und sichert eine bestehende Version vorher mit Zeitstempel.
+3. **Ich muss Claude Code jetzt NICHT neu starten** - du liest die Agent-Datei gleich direkt und führst das Setup selbst durch. Der Neustart kommt erst ganz am Ende.
 
 SCHRITT 2 - APIFY ANBINDEN
 Frag mich, ob ich schon ein Apify-Konto habe.
@@ -56,7 +70,9 @@ Mach einen Mini-Lauf über 10 Betriebe aus meiner Branche und Region:
 
 Erst wenn ich die Treffer abgenickt habe, ist das Setup fertig.
 
-Sag mir zum Schluss, dass ich Claude Code einmal neu starten soll, und wie ich das System ab dann benutze: "Leads für [Branche] in [Region]" für die Suche, "wen muss ich nachfassen" für den Stand, und einfach erzählen was passiert ist ("hab mit X telefoniert, Rückruf Dienstag"), damit das CRM gepflegt wird.
+Zeig mir dann eine kurze Übersicht, was jetzt steht: Agent installiert, Apify ja/nein, Scrapling ja/nein, Firecrawl ja/nein, Profil geschrieben, Ausgabeort. Und was davon noch offen ist.
+
+Erst danach: Sag mir, dass ich Claude Code einmal neu starten soll, und wie ich das System ab dann benutze: "Leads für [Branche] in [Region]" für die Suche, "wen muss ich nachfassen" für den Stand, und einfach erzählen was passiert ist ("hab mit X telefoniert, Rückruf Dienstag"), damit das CRM gepflegt wird.
 
 Wenn ein Schritt fehlschlägt, zeig mir die genaue Fehlermeldung, statt es als erledigt zu melden.
 

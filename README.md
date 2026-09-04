@@ -99,7 +99,7 @@ agent/lead-akquise.md   Der Agent. Mehr braucht es nicht: Leitprinzip, Werkzeugk
 install.sh              kopiert ihn nach ~/.claude/agents/ (mit Backup)
 SETUP-PROMPT.md         der Prompt, der alles einrichtet
 .env.example            Vorlage für deinen Apify-Token
-OFFEN.md                was noch nicht verifiziert ist
+GRENZEN.md              was belegt ist und was nicht
 ```
 
 Kein Skript, keine Abhängigkeiten. Leads suchen, Liste bauen, Stand ausgeben: das kann Claude selbst, dafür braucht es keinen Code, der nebenher gewartet werden muss.
