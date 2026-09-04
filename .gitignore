@@ -1,0 +1,16 @@
+.DS_Store
+.env
+*.bak-*
+__pycache__/
+
+# Nutzer-Kontext und Lead-Daten bleiben lokal, nie ins Repo
+akquise-profil.md
+leads/
+dossiers/
+data/
+scrape-input.json
+
+# Scrapling-Umgebung (lokal, nicht versionieren)
+.venv-scrapling/
+.venv*/
+*.bak
