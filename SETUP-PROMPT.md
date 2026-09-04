@@ -90,25 +90,29 @@ Wenn ein Schritt fehlschlägt, zeig mir die genaue Fehlermeldung, statt es als e
 
 # Zusatz: nur wenn du das Agentic OS nutzt
 
-Das Agentic OS hat einen **LEADS-Tab**, der deine Lead-Dateien als Übersicht
-anzeigt: Firmen links, Steckbrief und Kontaktdaten rechts, Status per Klick,
+Dann bekommst du deine Leads nicht nur als Datei, sondern als **eigenen Tab im
+Cockpit**: Firmen links, Steckbrief und Kontaktdaten rechts, Status per Klick,
 Website und LinkedIn direkt anklickbar.
 
-Der Tab kommt mit einer Plugin-Version, die neuer ist als v0.2.2. Hast du eine
-ältere, hol dir zuerst das aktuelle ZIP aus der Skool-Section - ohne das gibt es
-den Tab nicht, und die Anleitung unten läuft ins Leere.
+Der Tab wird hier eingebaut, du musst auf kein Update warten. Was du brauchst:
+**Node.js** (nodejs.org, LTS-Version) und etwa fünf Minuten. Beim letzten Schritt
+lädt Obsidian das Plugin neu und schließt dabei offene Terminals im Cockpit.
 
 Kopier diesen Block **zusätzlich** in dieselbe Claude-Code-Session, nachdem der
 Prompt oben durchgelaufen ist.
 
 ---
 
-Ich nutze das Agentic OS und will meine Leads im LEADS-Tab sehen.
+Ich nutze das Agentic OS und will meine Leads dort als eigenen Tab sehen.
 
-1. **Finde meinen Obsidian-Vault**, in dem das Agentic OS liegt. Rate den Pfad nicht: Schau unter macOS in `~/Library/Application Support/obsidian/obsidian.json` nach, welche Vaults es gibt, und frag mich, welcher es ist, wenn es mehrere sind. Das Plugin liegt dann unter `<vault>/.obsidian/plugins/agentic-os/`.
-2. **Prüf, ob mein Plugin den LEADS-Tab kennt:** Steht in dessen `main.js` der String `leads-root`?
-   - **Ja:** alles da, weiter mit Punkt 3.
-   - **Nein:** Sag mir, dass ich das Plugin aktualisieren muss - neues ZIP aus der Skool-Section, entpacken nach `<vault>/.obsidian/plugins/agentic-os/`, dann Obsidian neu laden. Versuch nicht, das Plugin selbst zu bauen; bei mir liegt kein Quellcode, sondern nur die fertigen Dateien. Bis dahin bekomme ich meine Leads als CSV, das läuft ohnehin.
-3. Leg `~/.skaile/data/leads/` an, falls der Ordner fehlt, und trag in `LEAD-SETUP.md` ein, dass meine Leads dorthin gehören - ein Unterordner je Kampagne, benannt nach Branche und Region.
-4. Erklär mir den Tab in drei Sätzen: oben Kampagne wählen und filtern, links die Firma anklicken, rechts Status setzen. Ein Klick auf Firmenname, Mail oder LinkedIn öffnet den Browser.
-5. Wichtig für dich als Agent: Die Dateien im Cockpit und deine Dateien sind dieselben. Ändere ich dort einen Status, siehst du das beim nächsten Lesen. Änderst du etwas, sehe ich es im Cockpit nach spätestens zwanzig Sekunden.
+Im Repo, das du vorhin geklont hast, liegt `agentic-os-tab/` mit den drei Dateien und einer Anleitung: `agentic-os-tab/EINBAU.md`. **Lies die Anleitung komplett und arbeite sie ab.** Sie beschreibt, welche vier Stellen in `src/App.tsx` zu ändern sind, wie geprüft wird und wie das Ergebnis in mein Vault kommt.
+
+Drei Dinge, auf die ich Wert lege:
+
+1. **Prüf zuerst die Voraussetzungen**, bevor du irgendetwas kopierst: Node vorhanden, mein Vault gefunden (rat den Pfad nicht, schau in `~/Library/Application Support/obsidian/obsidian.json` und frag mich, wenn es mehrere gibt), und ob der Tab vielleicht schon drin ist.
+2. **Der Versionsabgleich aus der Anleitung ist Pflicht.** Ist mein Plugin im Vault neuer als der Quellcode auf GitHub, brich ab und sag es mir - ich will keine Tabs verlieren, um einen dazuzubekommen.
+3. **Sicher mein altes `main.js` und `styles.css`**, bevor du sie ersetzt. Geht etwas schief, spielst du die Sicherung zurück, statt mich mit einem kaputten Cockpit sitzen zu lassen.
+
+Sag mir vor dem letzten Schritt Bescheid, dass Obsidian gleich neu lädt und offene Cockpit-Terminals dabei geschlossen werden - auch deins, falls du in einem läufst.
+
+Danach: Leg `~/.skaile/data/leads/` an, trag in `LEAD-SETUP.md` ein, dass meine Leads dorthin gehören (ein Unterordner je Kampagne), und erklär mir den Tab in drei Sätzen.

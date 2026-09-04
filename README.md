@@ -143,6 +143,20 @@ python3 -m venv .venv-scrapling && .venv-scrapling/bin/pip install "scrapling[al
 
 Ohne Scrapling läuft alles genauso, nur langsamer und ohne JavaScript-Inhalte. Der Setup-Prompt fragt dich danach und richtet es auf Wunsch ein.
 
+## Mit Agentic OS: eigener Tab im Cockpit
+
+Nutzt du das Agentic OS aus der Academy, bekommst du deine Leads nicht nur als
+Datei, sondern als **LEADS-Tab**: Firmen links mit Score und Status, rechts der
+Steckbrief - was die Firma macht, wo sie sitzt, wer ansprechbar ist. Status per
+Klick, Firmenname öffnet die Website, Adresse öffnet die Karte.
+
+Der Tab liegt in [`agentic-os-tab/`](agentic-os-tab/) und wird beim Setup
+eingebaut, du musst auf kein Plugin-Update warten. Dafür brauchst du Node.js.
+Der zweite Block in [SETUP-PROMPT.md](SETUP-PROMPT.md) erledigt das.
+
+Ohne Agentic OS bekommst du dieselben Daten als `leads.csv`, die sich direkt in
+Excel oder Numbers öffnen lässt.
+
 ## Voraussetzungen
 
 - [Claude Code](https://claude.com/claude-code)
