@@ -42,7 +42,7 @@ Schreib die Antworten als `akquise-profil.md` in meinen Arbeitsordner.
 SCHRITT 6 - WOHIN DIE LEADS SOLLEN
 Frag mich, ob ich das **Agentic OS** nutze (das Obsidian-Cockpit aus der Academy).
 
-- **Ich sage nein:** Die Leads kommen in `leads/` in meinem Arbeitsordner, je Firma eine Markdown-Datei. Zusätzlich schreibst du nach jedem Lauf eine `leads.csv`, die ich direkt in Excel oder Numbers öffnen kann - mit Semikolon als Trennzeichen und BOM am Anfang, sonst zerlegt Excel die Umlaute. Spalten in dieser Reihenfolge: Firma, Ort, Branche, Mitarbeiter, Ansprechpartner, Position, Telefon, Mail, Website, LinkedIn, Status, Score, Follow-up, Quelle, Signale.
+- **Ich sage nein:** Die Leads kommen in `leads/` in meinem Arbeitsordner, je Firma eine Markdown-Datei. Zusätzlich schreibst du nach jedem Lauf eine `leads.csv`, die ich direkt in Excel oder Numbers öffnen kann - mit Semikolon als Trennzeichen und BOM am Anfang, sonst zerlegt Excel die Umlaute. Spalten in dieser Reihenfolge: Firma, Was sie machen, Ort, Adresse, Branche, Mitarbeiter, Ansprechpartner, Position, Telefon, Mail, Website, LinkedIn, Status, Score, Follow-up, Quelle, Signale.
 - **Ich sage ja:** Die Leads kommen nach `~/.skaile/data/leads/<kampagne>/`, ein Ordner je Suchauftrag, benannt nach Branche und Region. Leg dort auch eine `_kampagne.md` mit `name:` an, das ist die Beschriftung im Cockpit. Die `leads.csv` schreibst du trotzdem, sie kostet nichts.
 
 Halt das Ergebnis in `LEAD-SETUP.md` fest, damit du beim nächsten Lauf weißt, wohin.

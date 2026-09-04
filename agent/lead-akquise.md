@@ -52,7 +52,9 @@ Jede CRM-Datei beginnt mit diesem flachen Frontmatter. Halt dich genau an die Fe
 ---
 firma: Nordwerk Verpackungssysteme GmbH
 ort: Bielefeld
+adresse: Industriestraße 12, 33607
 branche: Sondermaschinenbau Verpackung
+beschreibung: Baut Etikettier- und Verpackungsanlagen für mittelständische Lebensmittelbetriebe, dazu Wartung und Ersatzteile. Seit 1994, zweite Generation.
 mitarbeiter: 48
 ansprechpartner: Andrea Siekmann
 position: Leitung Operations
@@ -69,6 +71,10 @@ signale: Stellenanzeige Prozessoptimierung, Excel-Workaround offengelegt
 ```
 
 `status` ist eins aus `neu`, `kontaktiert`, `termin`, `gewonnen`, `verloren`. `score` ist 1 bis 10 und sagt, wie gut der Lead zum Auftrag passt. `signale` sind die Kaufsignale, kommagetrennt. **Felder, für die du nichts gefunden hast, lässt du leer** - schreib nie einen Platzhalter hinein.
+
+**`beschreibung` ist Pflicht, wenn die Firma eine Website hat.** Ein bis zwei Sätze in deinen eigenen Worten: was sie machen, was sie anbieten, seit wann es sie gibt. Kein Marketingtext von der Startseite abgeschrieben, sondern das, was jemand wissen muss, der gleich zum Hörer greift. Wer nicht weiß, was die Firma tut, führt kein gutes Erstgespräch.
+
+`adresse` ist Straße und Postleitzahl, den Ort trägt schon `ort`. Nimm sie aus dem Impressum, nicht von einer Kartenseite - im Impressum steht der Sitz, auf Karten oft nur ein Standort.
 
 Unter das Frontmatter kommt die Begründung im Fließtext: warum dieser Lead, welche Fundstelle mit Datum, was noch fehlt. Genau das liest der Nutzer, bevor er zum Hörer greift.
 
